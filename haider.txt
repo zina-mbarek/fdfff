@@ -1,0 +1,62 @@
+**************Change color with sprite renderer 2d**************
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Script : MonoBehaviour
+{
+  SpriteRenderer sprite1;
+
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        sprite1 = GetComponent<SpriteRenderer>();
+
+      
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            sprite1.color = Color.red;
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            sprite1.color = Color.blue;
+        }
+    }
+}
+********************************************************
+**************Character mouvement man8ir rigidbody2d**************
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Script : MonoBehaviour
+{
+
+    
+
+    // Start is called before the first frame update
+    void Start()
+    {
+  
+
+    }
+  
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown("z")) {
+            transform.Translate(transform.up * Time.deltaTime * 20) ;
+        }
+        if (Input.GetKeyDown("s"))
+        {
+            transform.Translate(Vector2.down*Time.deltaTime*20);
+        }
+    }
+}
